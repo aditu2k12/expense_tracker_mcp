@@ -11,10 +11,11 @@ from server import mcp
 #         await stack.enter_async_context(mcp.session_manager.run())
 #         yield
 
+mcp_app = mcp.http_app()
 
-app = FastAPI(title = 'Expense Tracker')
+app = FastAPI(title = 'Expense Tracker', lifespan= mcp_app.lifespan)
 
-app.mount("/expense", mcp.http_app())
+app.mount("/expense", mcp_app)
 
 port = int(os.environ.get("PORT", 10000))
 
