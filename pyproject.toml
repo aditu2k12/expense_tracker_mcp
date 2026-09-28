@@ -1,0 +1,16 @@
+[project]
+name = "expense-tracker-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.141.1",
+    "fastmcp==3.0.2",
+    "jsonpointer>=3.1.1",
+    "langchain-groq>=1.1.3",
+    "langchain-mcp-adapters>=0.3.1",
+    "numpy>=2.2.6",
+    "openpyxl>=3.1.5",
+    "pandas>=2.3.3",
+]
